@@ -1,0 +1,99 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for GameSparksMinimal Plugin",
+  "text": {
+    "plugins": {
+      "mikal_gamesparksminimal": {
+        "name": "GameSparksMinimal",
+        "description": "Gamesparks Minmal Plugin, only does initialization, SendData, Returns Response. User must manually format the data to send. Use C3 JSON plugin to format data to send and parse response data.",
+        "help-url": "https://github.com/armandoalonso/c3IDE",
+        "properties": {
+          "apiKey": {
+            "name": "apiKey",
+            "desc": "apiKey"
+          },
+          "apiSecret": {
+            "name": "apiSecret",
+            "desc": "apiSecret"
+          }
+        },
+        "aceCategories": {
+          "connection": "Connection"
+        },
+        "conditions": {
+          "oninit": {
+            "list-name": "On Init",
+            "display-text": "On Init",
+            "description": "Triggered when the SDK is finished initialising."
+          },
+          "onmessage": {
+            "list-name": "On Message",
+            "display-text": "On Message",
+            "description": "Triggered when a message object is sent from the server to the client."
+          },
+          "onresponse": {
+            "list-name": "On Response",
+            "display-text": "On Response",
+            "description": "Triggered when a response object is sent from the server to the client."
+          }
+        },
+        "actions": {
+          "initpreview": {
+            "list-name": "InitPreview",
+            "display-text": "InitPreview",
+            "description": "Initialise the SDK and connect to the preview server."
+          },
+          "sendwithdata": {
+            "list-name": "SendWithData",
+            "display-text": "Send With Data {0} {1}",
+            "description": "Send with Data to GS servers from client.",
+            "params": {
+              "requesttype": {
+                "name": "RequestType",
+                "desc": "Request Type."
+              },
+              "jsondata": {
+                "name": "JSONData",
+                "desc": "JSON as a string."
+              }
+            }
+          },
+          "initlive": {
+            "list-name": "InitLive",
+            "display-text": "InitLive",
+            "description": "Initialise the SDK and connect to the live server."
+          },
+          "sendwithdataid": {
+            "list-name": "SendWithDataId",
+            "display-text": "Send With Data {0} {1} {2}",
+            "description": "Send with Data to GS servers from client.",
+            "params": {
+              "requestid": {
+                "name": "RequestId",
+                "desc": "User Request Id"
+              },
+              "jsondata": {
+                "name": "JSONData",
+                "desc": "JSON Data"
+              },
+              "requesttype": {
+                "name": "RequestType",
+                "desc": "Request Type"
+              }
+            }
+          }
+        },
+        "expressions": {
+          "lastmessage": {
+            "translated-name": "lastmessage",
+            "description": "Last Message received from GameSparks."
+          },
+          "lastresponse": {
+            "translated-name": "lastresponse",
+            "description": "Last Message received from GameSparks."
+          }
+        }
+      }
+    }
+  }
+}
